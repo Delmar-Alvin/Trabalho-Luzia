@@ -1,0 +1,85 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #4A90E2;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.full-screen {
+    min-height: 100vh; /* Altura mínima para ocupar a tela inteira */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    padding: 20px; /* Espaçamento interno */
+    background: #f9f9f9;
+    border: 2px solid #4A90E2; /* Borda azul */
+    border-radius: 8px; /* Cantos arredondados */
+    margin: 20px; /* Espaçamento externo */
+}
+
+.content {
+    max-width: 800px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0; /* Espaçamento entre a imagem e o texto */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4A90E2;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para a mensagem "OBRIGADO" */
+#thank-you-message {
+    visibility: hidden; /* Esconder por padrão, mas ocupar espaço */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: #4A90E2;
+    z-index: 1000; /* Garantir que fique acima de outros elementos */
+    transition: opacity 0.5s ease; /* Transição suave */
+    opacity: 0; /* Começar invisível */
+}

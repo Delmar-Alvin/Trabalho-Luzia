@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Síndrome de Klinefelter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para a mensagem "OBRIGADO" */
+        .thank-you-message {
+            position: fixed;
+            font-size: 3em;
+            color: #4A90E2;
+            z-index: 1000; /* Garantir que fique acima de outros elementos */
+            opacity: 1; /* Começar visível */
+            transition: opacity 0.5s ease; /* Transição suave */
+        }
+
+        .aluno-section {
+            background-color: #E1F5FE; /* Cor de fundo suave */
+            border: 2px solid #039BE5; /* Borda azul */
+            border-radius: 8px; /* Cantos arredondados */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            animation: bounce 0.5s; /* Animação de "bounce" */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Síndrome de Klinefelter</h1>
+        <nav>
+            <ul>
+                <li><a href="#o-que-e">O que é?</a></li>
+                <li><a href="#sintomas">Sintomas</a></li>
+                <li><a href="#diagnostico">Diagnóstico</a></li>
+                <li><a href="#tratamento">Tratamento</a></li>
+                <li><a href="#alunos">Alunos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="o-que-e" class="full-screen">
+            <h2>O que é?</h2>
+            <div class="content">
+                <img src="Human_chromosomesXXY01.png" alt="O que é a Síndrome de Klinefelter" />
+                <p>A síndrome de Klinefelter é uma condição genética que afeta homens, caracterizada pela presença de um ou mais cromossomos X extras. O padrão cromossômico mais comum é 47,XXY. Essa condição pode levar a uma variedade de características físicas, emocionais e cognitivas, afetando a qualidade de vida do indivíduo.</p>
+            </div>
+        </section>
+
+        <section id="sintomas" class="full-screen">
+            <h2>Sintomas</h2>
+            <div class="content">
+                <img src="9895abf01e947634070c716cb12d3a5c.jpg" alt="Sintomas da Síndrome de Klinefelter" />
+                <ul>
+                    <li>Infertilidade e problemas no desenvolvimento das bolotas</li>
+                    <li>Desenvolvimento mamário (ginecomastia)</li>
+                    <li>Baixa produção de testosterona, resultando em diminuição da libido</li>
+                    <li>Estatura acima da média</li>
+                    <li>Dificuldades de aprendizagem, especialmente em linguagem e leitura</li>
+                    <li>Problemas de autoestima e ansiedade</li>
+                    <li>Menos massa muscular e maior proporção de gordura corporal</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="diagnostico" class="full-screen">
+            <h2>Diagnóstico</h2>
+            <div class="content">
+                <img src="lab-photo-1000x562.jpg" alt="Diagnóstico da Síndrome de Klinefelter" />
+                <p>O diagnóstico é realizado por meio de exames genéticos, como o cariótipo, que identificam a presença do cromossomo extra. Geralmente, o diagnóstico é feito na adolescência ou na idade adulta, mas pode ser identificado mais cedo com testes pré-natais.</p>
+            </div>
+        </section>
+
+        <section id="tratamento" class="full-screen">
+            <h2>Tratamento</h2>
+            <div class="content">
+                <img src="gpconsultationsmall.jpg" alt="Tratamento da Síndrome de Klinefelter" />
+                <p>O tratamento pode incluir terapia de reposição de testosterona para melhorar os níveis hormonais e promover o desenvolvimento muscular. Além disso, o acompanhamento psicológico e o suporte educacional são importantes para ajudar no desenvolvimento emocional e social. Em alguns casos, procedimentos cirúrgicos podem ser considerados para a ginecomastia.</p>
+            </div>
+        </section>
+
+        <section id="alunos" class="full-screen aluno-section">
+            <h2>Alunos</h2>
+            <div class="content">
+                <p>Alunos que participaram:</p>
+                <ul>
+                    <li>Delmar Alvin Schultz</li>
+                    <li>Emanueli de Oliveira</li>
+                    <li>Dirceu Kozak Neto</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p class="thank-you">Obrigado! Clique 5 para uma surpresa!</p>
+            <p>&copy; 2024 - Informações sobre a síndrome de Klinefelter</p>
+        </footer>
+    </main>
+
+    <script src="confetti.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const alunoSection = document.querySelector('#alunos');
+
+            alunoSection.addEventListener('mouseover', () => {
+                console.log("Evento 'mouseover' detectado na seção de alunos.");
+            });
+
+            // Adicionar evento de tecla para navegar entre seções e mostrar a mensagem
+            document.addEventListener('keydown', (event) => {
+                switch (event.key) {
+                    case '1':
+                        document.getElementById('o-que-e').scrollIntoView({ behavior: 'smooth' });
+                        break;
+                    case '2':
+                        document.getElementById('sintomas').scrollIntoView({ behavior: 'smooth' });
+                        break;
+                    case '3':
+                        document.getElementById('diagnostico').scrollIntoView({ behavior: 'smooth' });
+                        break;
+                    case '4':
+                        document.getElementById('tratamento').scrollIntoView({ behavior: 'smooth' });
+                        break;
+                    case '5':
+                        // Criar várias mensagens "OBRIGADO!" em locais aleatórios
+                        for (let i = 0; i < 5; i++) { // Ajuste o número de mensagens aqui
+                            createThankYouMessage();
+                        }
+                        break;
+                }
+            });
+
+            function createThankYouMessage() {
+                const message = document.createElement('div');
+                message.classList.add('thank-you-message');
+                message.innerText = "OBRIGADO!";
+
+                // Posição aleatória
+                const x = Math.random() * (window.innerWidth - 200); // 200 é a largura estimada do texto
+                const y = Math.random() * (window.innerHeight - 100); // 100 é a altura estimada do texto
+                message.style.left = `${x}px`;
+                message.style.top = `${y}px`;
+
+                document.body.appendChild(message);
+
+                // Remover a mensagem após 2 segundos
+                setTimeout(() => {
+                    message.style.opacity = 0; // Começar a desaparecer
+                    setTimeout(() => {
+                        document.body.removeChild(message); // Remover do DOM
+                    }, 500); // Tempo de espera para ocultar
+                }, 2000); // Duração em que a mensagem ficará visível
+            }
+        });
+    </script>
+</body>
+</html>
